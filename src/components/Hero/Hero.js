@@ -19,13 +19,13 @@ function Hero() {
         width: '99vw',
         backgroundColor: '#78586F',
         height: '27em',
-        marginTop: '1.5em',
+        marginTop: '1.1em',
       }}
       >
         <CardContent sx={{
           textAlign: 'center'
         }}>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="h6" color="text.secondary">
             Headliner
           </Typography>
         </CardContent>

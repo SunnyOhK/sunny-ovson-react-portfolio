@@ -56,15 +56,18 @@ function ImgCarousel() {
       <CardContent sx={{
         textAlign: 'center'
       }}>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="subtitle1" color="text.secondary">
           {myImages[index].text}
         </Typography>
       </CardContent>
       <CardActions sx={{
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}>
-        <IconButton aria-label="next" onClick={rotateImage}>
+        <IconButton aria-label="next" onClick={rotateImage} sx={{
+          marginTop: '-0.9em'
+        }}
+        >
           <NavigateNextIcon />
         </IconButton>
       </CardActions>
