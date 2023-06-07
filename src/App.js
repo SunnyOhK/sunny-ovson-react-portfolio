@@ -7,15 +7,18 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 // import Projects from './components/Projects/Projects';
 // import Resume from './components/Resume/Resume';
-
+// import { PageProvider } from './PageProvider';
+import { ThemeProvider } from './ThemeProvider';
 
 function App() {
   return (
-    <div>
+    <ThemeProvider>
       <Navbar />
       <Hero />
-    </div>
+    </ThemeProvider>
   )
 };
 
 export default App;
+{/* <PageProvider> */ }
+{/* </PageProvider> */ }

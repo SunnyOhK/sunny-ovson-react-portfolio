@@ -8,22 +8,30 @@ function NavigationButtons() {
     {
       name: 'About',
       message: 'A Few Things About Sunny',
-      action: 'tbd'
+      action: () => {
+        console.log('About button clicked.')
+      }
     },
     {
       name: 'Projects',
       message: 'Just a Few of My Projects...',
-      action: 'tbd'
+      action: () => {
+        console.log('Projects button clicked.')
+      }
     },
     {
       name: 'Resume',
       message: 'Marketing Pro Turned Up-&-Coming Dev Master',
-      action: 'tbd'
+      action: () => {
+        console.log('Resume button clicked.')
+      }
     },
     {
       name: 'Contact',
       message: 'Get in Touch!',
-      action: 'tbd'
+      action: () => {
+        console.log('Contact button clicked.')
+      }
     }
   ];
 
