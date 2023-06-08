@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
         primary: "#414449",
         secondary: "#FEFEFE",
         tertiary: "#62677A",
-        quaternary: "#99AEAF",
+        quaternary: "#FAEBD7",
         headlinerText: "#414449"
       })
     } else if (colorValue === 1){
@@ -26,7 +26,7 @@ export const ThemeProvider = ({ children }) => {
         primary: "#000000",
         secondary: "#FFFFFF",
         tertiary: "#78586F",
-        quaternary: "#FAEBD7",
+        quaternary: "#FFFFFF",
         headlinerText: "#414449"
       })
     }
