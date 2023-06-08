@@ -4,15 +4,16 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [colors, setColors] = useState({
-    primary: "black",
-    secondary: "white",
+    primary: "#000000",
+    secondary: "#FFFFFF",
     tertiary: "#78586F",
     quaternary: "#FAEBD7",
     headlinerText: "#414449"
-  });
+});
 
-  const toggleMode = () => {
-    if(colors.primary === "black"){
+  const toggleMode = (event) => {
+    const colorValue = event.target.value;
+    if (colorValue === 2){
       setColors({
         primary: "#414449",
         secondary: "#FEFEFE",
@@ -20,10 +21,10 @@ export const ThemeProvider = ({ children }) => {
         quaternary: "#99AEAF",
         headlinerText: "#414449"
       })
-    } else {
+    } else if (colorValue === 1){
       setColors({
-        primary: "black",
-        secondary: "white",
+        primary: "#000000",
+        secondary: "#FFFFFF",
         tertiary: "#78586F",
         quaternary: "#FAEBD7",
         headlinerText: "#414449"
