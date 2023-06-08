@@ -12,18 +12,15 @@ import Select from '@mui/material/Select';
 // import NavigationButtons from "../Buttons/AboutButton";
 import './style.css';
 import { ThemeContext } from "../../ThemeProvider";
+import { PageContext } from "../../PageProvider";
 
-
-// const colorSchemes = [
-//   { id: 'purple', name: 'Purple' },
-//   { id: 'grey', name: 'Grey' },
-//   { id: 'other', name: 'Other' }
-// ];
 
 function Navbar() {
   console.log("navbar rendered")
   const { colors, toggleMode } = useContext(ThemeContext);
   console.log(colors);
+  const { page, togglePage } = useContext(PageContext);
+  console.log(page);
 
   return (
     <AppBar position="static" sx={{
@@ -54,38 +51,54 @@ function Navbar() {
             Sunny Ovson
           </Typography>
           <div className='menuItems'>
-            <Button sx={{
-              color: colors.secondary,
-              fontSize: '18px',
-              marginTop: '0.8em'
-            }}
+            <Button
+              value={2}
+              onClick={togglePage}
+              label="Page"
+              sx={{
+                color: colors.secondary,
+                fontSize: '18px',
+                marginTop: '0.8em'
+              }}
             >
               About
             </Button>
-            <Button sx={{
-              color: colors.secondary,
-              fontSize: '18px',
-              paddingLeft: '17px',
-              marginTop: '0.8em'
-            }}
+            <Button
+              value={3}
+              onClick={togglePage}
+              label="Page"
+              sx={{
+                color: colors.secondary,
+                fontSize: '18px',
+                paddingLeft: '17px',
+                marginTop: '0.8em'
+              }}
             >
               Projects
             </Button>
-            <Button sx={{
-              color: colors.secondary,
-              fontSize: '18px',
-              paddingLeft: '17px',
-              marginTop: '0.8em'
-            }}
+            <Button
+              value={4}
+              onClick={togglePage}
+              label="Page"
+              sx={{
+                color: colors.secondary,
+                fontSize: '18px',
+                paddingLeft: '17px',
+                marginTop: '0.8em'
+              }}
             >
               Resume
             </Button>
-            <Button sx={{
-              color: colors.secondary,
-              fontSize: '18px',
-              paddingLeft: '17px',
-              marginTop: '0.8em'
-            }}
+            <Button
+              value={5}
+              onClick={togglePage}
+              label="Page"
+              sx={{
+                color: colors.secondary,
+                fontSize: '18px',
+                paddingLeft: '17px',
+                marginTop: '0.8em'
+              }}
             >
               Contact
             </Button>
@@ -100,7 +113,7 @@ function Navbar() {
               }}
               >
                 Theme
-                </InputLabel>
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-standard-label"
                 id="demo-simple-select-standard"

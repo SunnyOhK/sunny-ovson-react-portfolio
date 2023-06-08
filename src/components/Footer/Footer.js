@@ -9,7 +9,7 @@ import { ThemeContext } from "../../ThemeProvider";
 import './style.css';
 
 function Footer() {
-  const { colors, toggleMode } = useContext(ThemeContext);
+  const { colors } = useContext(ThemeContext);
   return (
     <Container maxWidth='100vw' sx={{
       backgroundColor: colors.primary,
