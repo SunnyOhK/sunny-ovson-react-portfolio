@@ -29,11 +29,12 @@ function Navbar() {
     <AppBar position="static" sx={{
       backgroundColor: colors.primary,
       height: '4.5em',
-      // display: "flex",
-      // alignContent: 'center',
     }}>
-      <Container maxWidth='x1'>
-        <Toolbar disableGutters>
+      <Container maxWidth='99'>
+        <Toolbar disableGutters sx={{
+          width: '100%',
+          paddingTop: '.1em'
+        }}>
           <Typography
             variant="h4"
             noWrap
