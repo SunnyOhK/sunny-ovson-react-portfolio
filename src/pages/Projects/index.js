@@ -2,11 +2,16 @@ import React from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
+// import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { ThemeContext } from "../../providers/ThemeProvider";
 import { useContext } from "react";
+import PatternOne from '../../images/pattern-1.jpg';
+import PatternTwo from '../../images/pattern-2.jpg';
+import PatternThree from '../../images/pattern-3.jpg';
+import PatternFour from '../../images/pattern-4.jpg';
+import Container from "@mui/material/Container";
 
 
 function Projects() {
@@ -14,39 +19,43 @@ function Projects() {
 
   const itemData = [
     {
-      img: '../../../public/images/pattern-1.jpg',
+      img: PatternOne,
       title: 'Project 1',
       github: 'GH1',
     },
     {
-      img: '../../../public/images/pattern-2.jpg',
+      img: PatternTwo,
       title: 'Project 2',
       github: 'GH2',
     },
     {
-      img: '../../../public/images/pattern-3.jpg',
+      img: PatternThree,
       title: 'Project 3',
       github: 'GH3',
     },
     {
-      img: '../../../public/images/pattern-4.jpg',
+      img: PatternFour,
       title: 'Project 4',
       github: 'GH4',
     }
   ];
 
   return (
+<Container maxWidth='100vw' sx={{
+  display: 'flex',
+  justifyContent: 'center'
+}} >
     <ImageList 
       sx={{ 
-        width: 800, 
-        height: 650,
+        width: 1550, 
+        height: 1000,
         }}
         >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}`}
+            srcSet={`${item.img}`}
             alt={item.title}
             loading="lazy"
           />
@@ -65,6 +74,7 @@ function Projects() {
         </ImageListItem>
       ))}
     </ImageList>
+    </Container>
   );
 }
 
