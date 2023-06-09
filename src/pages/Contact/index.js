@@ -4,20 +4,30 @@ import { useContext } from "react";
 import { ThemeContext } from "../../providers/ThemeProvider";
 import './style.css';
 import Divider from '@mui/material/Divider';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Button from '@mui/material/Button';
 
 function Contact() {
   console.log('Contact Me')
   const { colors } = useContext(ThemeContext);
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+  const borderColor = '#FAEBD7';
+
+  const buttonStyle = {
+    backgroundColor: colors.primary,
+    width: '90px',
+    color: colors.secondary,
+    '&:hover': {
+      backgroundColor: colors.headlinerText,
+      border: `1px solid ${borderColor}`
+    }
+  }
+
+  const handleRedirect = (url) => {
+    window.open(url, '_blank');
+  };
 
   return (
     <Container className='letterContainer' maxWidth='lg'>
@@ -46,12 +56,32 @@ function Contact() {
         sx={{
           mt: 'auto',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          backgroundColor: colors.tertiary,
+          height: '4rem',
         }}
       >
-        <Item>Item 1</Item>
-        <Item>Item 2</Item>
-        <Item>Item 3</Item>
+        <Button
+          variant="contained"
+          sx={buttonStyle}
+          onClick={() => handleRedirect('https://github.com/SunnyOhK/sunny-ovson-react-portfolio.git')}
+        >
+          <GitHubIcon />
+        </Button>
+        <Button
+          variant="contained"
+          sx={buttonStyle}
+          onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
+        >
+          <EmailIcon />
+        </Button>
+        <Button
+          variant="contained"
+          sx={buttonStyle}
+          onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
+        >
+          <LinkedInIcon />
+        </Button>
       </Stack>
 
     </Container>
