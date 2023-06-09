@@ -1,25 +1,28 @@
 import React, { useContext } from "react";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-// import moment from "moment"
+import IconButton from '@mui/material/IconButton';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';// import moment from "moment"
 // import NavigationButtons from "../Buttons/AboutButton";
 import './style.css';
-import { ThemeContext } from "../../ThemeProvider";
-import { PageContext } from "../../PageProvider";
+import { ThemeContext } from "../../providers/ThemeProvider";
+import { PageContext } from "../../providers/PageProvider";
 
 
 function Navbar() {
   console.log("navbar rendered")
   const { colors, toggleMode } = useContext(ThemeContext);
-  console.log(colors);
   const { page, togglePage } = useContext(PageContext);
+  const menuItems = ["About", "Projects", "Contact", "Resume"]
+
+  console.log(colors);
   console.log(page);
 
   return (
@@ -32,81 +35,45 @@ function Navbar() {
           width: '100%',
           paddingTop: '.1em'
         }}>
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
+          <IconButton
+            label="Home"
+            size="large"
+            onClick={() => togglePage("Home")}
             sx={{
-              // flex: "1 0 auto",
-              display: { xs: "none", md: "flex" },
-              // ml: -20,
-              fontFamily: 'Neucha',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
+              display: { xs: "flex", md: "flex" },
               color: colors.secondary,
-              textDecoration: 'none',
               marginRight: 'auto',
             }}
-          >
-            Sunny Ovson
-          </Typography>
+            >
+            <HomeOutlinedIcon 
+            sx={{
+                height: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
+                width: { xs: '1.2em', md: '1.5em', lg: '1.8em' }
+            }}
+            />
+          </IconButton>
           <div className='menuItems'>
-            <Button
-              value={2}
-              onClick={togglePage}
-              label="Page"
-              sx={{
-                color: colors.secondary,
-                fontSize: '18px',
-                marginTop: '0.8em'
-              }}
-            >
-              About
-            </Button>
-            <Button
-              value={3}
-              onClick={togglePage}
-              label="Page"
-              sx={{
-                color: colors.secondary,
-                fontSize: '18px',
-                paddingLeft: '17px',
-                marginTop: '0.8em'
-              }}
-            >
-              Projects
-            </Button>
-            <Button
-              value={4}
-              onClick={togglePage}
-              label="Page"
-              sx={{
-                color: colors.secondary,
-                fontSize: '18px',
-                paddingLeft: '17px',
-                marginTop: '0.8em'
-              }}
-            >
-              Resume
-            </Button>
-            <Button
-              value={5}
-              onClick={togglePage}
-              label="Page"
-              sx={{
-                color: colors.secondary,
-                fontSize: '18px',
-                paddingLeft: '17px',
-                marginTop: '0.8em'
-              }}
-            >
-              Contact
-            </Button>
+            {menuItems.map(item => (
+              <Button
+                key={item}
+                onClick={() => togglePage(item)}
+                label="Page"
+                sx={{
+                  color: colors.secondary,
+                  fontSize: { xs: '14px', md: '16px', lg: '18px' },
+                  marginTop: '0.8em'
+                }}
+              >
+                {item}
+              </Button>
+            ))}
+
             <FormControl variant="standard" sx={{
               m: 1,
               minWidth: 120,
               backgroundColor: '#ffffff3b',
-              border: 'none'
+              border: 'none',
+              display: { xs: 'none', sm: 'inline-flex' }
             }}>
               <InputLabel id="demo-simple-select-helper-label" sx={{
                 color: '#ffffff',
@@ -135,10 +102,10 @@ function Navbar() {
                 }}>
                   The Blues
                 </MenuItem>
-                <MenuItem value={3} disabled={true} sx={{
+                <MenuItem value={3} sx={{
                   color: '#414449'
                 }}>
-                  Other
+                  Retro
                 </MenuItem>
               </Select>
             </FormControl>

@@ -48,9 +48,10 @@ function ImgCarousel() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          maxHeight: '270px',
+          maxHeight: '29em',
           objectFit: 'contain',
           margin: 'auto',
+          paddingBottom: '-1em'
         }}
         />
       <CardContent sx={{
@@ -65,7 +66,7 @@ function ImgCarousel() {
         alignItems: 'center',
       }}>
         <IconButton aria-label="next" onClick={rotateImage} sx={{
-          marginTop: '-0.9em'
+          marginTop: '-0.9em',
         }}
         >
           <NavigateNextIcon />

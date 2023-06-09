@@ -1,21 +1,23 @@
 import React from 'react';
 import './App.css';
-// import About from './components/About/About';
-// import Contact from './components/Contact/Contact';
+
 import Footer from './components/Footer/Footer';
-import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 // import Projects from './components/Projects/Projects';
 // import Resume from './components/Resume/Resume';
-import { PageProvider } from './PageProvider';
-import { ThemeProvider } from './ThemeProvider';
+import { PageProvider } from './providers/PageProvider';
+import { ThemeProvider } from './providers/ThemeProvider';
+import PageContainer from "./pages"
+import Header from './components/Header/Header';
 
 function App() {
+
   return (
     <ThemeProvider>
       <PageProvider>
+        <Header />
       <Navbar />
-      <Hero />
+      <PageContainer/>
       <Footer />
       </PageProvider>
     </ThemeProvider>

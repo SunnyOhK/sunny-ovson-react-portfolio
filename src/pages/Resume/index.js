@@ -1,8 +1,7 @@
-// import React from "react";
-
 function Resume() {
+  console.log('My Resume')
   return (
-    console.log('My Resume')
+    <h1>My Resume</h1>
   )
 };
 

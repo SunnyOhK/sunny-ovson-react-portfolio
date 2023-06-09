@@ -5,11 +5,14 @@ import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../providers/ThemeProvider";
 import './style.css';
 
 function Footer() {
   const { colors } = useContext(ThemeContext);
+  // let iconColor = colors.quaternary
+  // colors.primary === "white" ? iconColor= "red" : iconColor="blue"
+
   return (
     <Container maxWidth='100vw' sx={{
       backgroundColor: colors.primary,
@@ -21,9 +24,9 @@ function Footer() {
         <EmailIcon fontSize="large" className="icon" sx={{
           color: colors.quaternary
         }} />
-        <PhoneInTalkIcon fontSize="large" className="icon" sx={{
+        {/* <PhoneInTalkIcon fontSize="large" className="icon" sx={{
           color: colors.quaternary
-        }} />
+        }} /> */}
         <LinkedInIcon fontSize="large" className="icon" sx={{
           color: colors.quaternary
         }} />

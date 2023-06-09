@@ -29,6 +29,30 @@ export const ThemeProvider = ({ children }) => {
         quaternary: "#FFFFFF",
         headlinerText: "#414449"
       })
+    } else if (colorValue === 3){
+      setColors({
+        primary: "#10224C",
+        secondary: "#FCDAAF",
+        tertiary: "#F36B3D",
+        quaternary: "#FCDAAF",
+        headlinerText: "#006E94"
+      })
+    } else if (colorValue === 4){
+      setColors({
+        myname: "",
+        navback: "",
+        navbtntxt: "",
+        headerback: "",
+        footerback: "",
+        footicon: "",
+        copyrighttxt: "",
+        pageback: "",
+        primary: "#10224C",
+        secondary: "#FCDAAF",
+        tertiary: "#F36B3D",
+        quaternary: "#FCDAAF",
+        headlinerText: "#006E94"
+      })
     }
   }
 
