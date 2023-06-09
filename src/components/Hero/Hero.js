@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import './style.css';
 import ImgCarousel from "../ImgCarousel/ImgCarousel";
 // import { Icon } from "@mui/material";
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../providers/ThemeProvider";
 
 
 function Hero() {
@@ -22,8 +22,9 @@ function Hero() {
       <Card sx={{
         width: '99vw',
         backgroundColor: colors.tertiary,
-        height: '27em',
+        height: '33em',
         marginTop: '1.1em',
+        marginBottom: '-0.9em'
       }}
       >
         <CardContent sx={{
