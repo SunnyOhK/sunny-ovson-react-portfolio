@@ -1,2 +1,16 @@
   let iconColor = colors.quaternary
   colors.primary === "white" ? iconColor= "red" : iconColor="blue"
+
+  just in case:
+  <GitHubIcon fontSize="large" className="icon" sx={{
+          color: colors.quaternary
+        }} />
+        <EmailIcon fontSize="large" className="icon" sx={{
+          color: colors.quaternary
+        }} />
+        {/* <PhoneInTalkIcon fontSize="large" className="icon" sx={{
+          color: colors.quaternary
+        }} /> */}
+        <LinkedInIcon fontSize="large" className="icon" sx={{
+          color: colors.quaternary
+        }} />

@@ -9,7 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';// import moment from "moment"
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+// import moment from "moment"
 // import NavigationButtons from "../Buttons/AboutButton";
 import './style.css';
 import { ThemeContext } from "../../providers/ThemeProvider";
@@ -20,7 +21,7 @@ function Navbar() {
   console.log("navbar rendered")
   const { colors, toggleMode } = useContext(ThemeContext);
   const { page, togglePage } = useContext(PageContext);
-  const menuItems = ["About", "Projects", "Contact", "Resume"]
+  const menuItems = [ "About", "Projects", "Contact", "Resume" ]
 
   console.log(colors);
   console.log(page);
@@ -36,20 +37,20 @@ function Navbar() {
           paddingTop: '.1em'
         }}>
           <IconButton
-            label="Home"
+            label="Page"
             size="large"
             onClick={() => togglePage("Home")}
             sx={{
-              display: { xs: "flex", md: "flex" },
+              display: 'flex',
               color: colors.secondary,
               marginRight: 'auto',
             }}
-            >
-            <HomeOutlinedIcon 
-            sx={{
+          >
+            <HomeOutlinedIcon
+              sx={{
                 height: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
                 width: { xs: '1.2em', md: '1.5em', lg: '1.8em' }
-            }}
+              }}
             />
           </IconButton>
           <div className='menuItems'>
@@ -67,7 +68,6 @@ function Navbar() {
                 {item}
               </Button>
             ))}
-
             <FormControl variant="standard" sx={{
               m: 1,
               minWidth: 120,
@@ -89,7 +89,8 @@ function Navbar() {
                 label="Theme"
                 sx={{
                   border: 'none',
-                  color: '#ffffff'
+                  color: '#ffffff',
+                  height: '25px'
                 }}
               >
                 <MenuItem value={1} sx={{
@@ -102,7 +103,7 @@ function Navbar() {
                 }}>
                   The Blues
                 </MenuItem>
-                <MenuItem value={3} sx={{
+                <MenuItem value={3} disabled='true' sx={{
                   color: '#414449'
                 }}>
                   Retro
