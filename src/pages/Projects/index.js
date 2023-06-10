@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 // import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 // import { ThemeContext } from "../../providers/ThemeProvider";
 // import { useContext } from "react";
 import PatternOne from '../../images/pattern-1.jpg';
@@ -15,40 +15,45 @@ import Container from "@mui/material/Container";
 
 
 function Projects() {
-  // const { colors } = useContext(ThemeContext);
+  const handleRedirect = (url) => {
+    window.open(url, '_blank');
+  };
 
   const itemData = [
     {
       img: PatternOne,
-      title: 'Project 1',
-      github: 'GH1',
+      title: 'Quizify',
+      subtitle: 'GH1',
+      url: 'https://github.com/SunnyOhK/QuiZify.git'
     },
     {
       img: PatternTwo,
-      title: 'Project 2',
-      github: 'GH2',
+      title: `Snack n' Dash`,
+      subtitle: 'GH2',
+      url: 'https://github.com/SunnyOhK/snack-n-dash.git'
     },
     {
       img: PatternThree,
-      title: 'Project 3',
-      github: 'GH3',
+      title: 'Ready. Pet. Go!',
+      subtitle: 'GH3',
+      url: 'https://github.com/SunnyOhK/QuiZify.git'
     },
     {
       img: PatternFour,
-      title: 'Project 4',
-      github: 'GH4',
+      title: 'COMING SOON',
+      subtitle: 'GH4',
     }
   ];
 
   return (
-<Container maxWidth='2000px' sx={{
+<Container maxWidth='1800px' sx={{
   display: 'flex',
   justifyContent: 'center',
   height: 'auto'
 }} >
     <ImageList 
       sx={{ 
-        width: '90%',
+        width: '80%',
         height: 'auto'
         }}
         >
@@ -62,13 +67,14 @@ function Projects() {
           />
           <ImageListItemBar
             title={item.title}
-            subtitle={item.github}
+            subtitle={item.subtitle}
             actionIcon={
               <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                sx={{ color: 'rgba(255, 255, 255, 0.74)' }}
                 aria-label={`info about ${item.title}`}
+                onClick={() => handleRedirect(`${item.url}`)}
               >
-                <InfoIcon />
+                <OpenInNewIcon />
               </IconButton>
             }
           />

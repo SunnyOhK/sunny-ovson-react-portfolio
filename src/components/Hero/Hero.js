@@ -8,9 +8,9 @@ import CardContent from '@mui/material/CardContent';
 // import { IconButton } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import './style.css';
-import ImgCarousel from "../ImgCarousel/ImgCarousel";
 // import { Icon } from "@mui/material";
 import { ThemeContext } from "../../providers/ThemeProvider";
+import HeroCarousel from "../ImgCarousel/HeroCarousel";
 
 
 function Hero() {
@@ -35,7 +35,7 @@ function Hero() {
           </Typography>
         </CardContent>
 
-        <ImgCarousel />
+        <HeroCarousel />
 
       </Card>
     </div>

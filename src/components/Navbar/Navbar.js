@@ -22,6 +22,7 @@ function Navbar() {
   const { colors, toggleMode } = useContext(ThemeContext);
   const { page, togglePage } = useContext(PageContext);
   const menuItems = [ "About", "Projects", "Contact", "Resume" ]
+  const borderColor = '#FAEBD7';
 
   console.log(colors);
   console.log(page);
@@ -62,7 +63,10 @@ function Navbar() {
                 sx={{
                   color: colors.secondary,
                   fontSize: { xs: '14px', md: '16px', lg: '18px' },
-                  marginTop: '0.8em'
+                  marginTop: '0.8em',
+                  '&:hover': {
+                    boxShadow: `1px 2px 7px 0px ${borderColor}`
+                  }
                 }}
               >
                 {item}
