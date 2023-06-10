@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
 
-function ImgCarousel() {
+function HeroCarousel() {
 
   const [index, setIndex] = useState(0);
   const myImages = [
@@ -76,4 +76,4 @@ function ImgCarousel() {
   )
 };
 
-export default ImgCarousel;
+export default HeroCarousel;
