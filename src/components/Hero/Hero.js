@@ -22,21 +22,12 @@ function Hero() {
       <Card sx={{
         width: '99vw',
         backgroundColor: colors.tertiary,
-        height: '33em',
+        height: 'auto',
         marginTop: '1.1em',
         marginBottom: '-0.9em'
       }}
       >
-        <CardContent sx={{
-          textAlign: 'center'
-        }}>
-          <Typography variant="h6" color="text.secondary">
-            Headliner
-          </Typography>
-        </CardContent>
-
         <HeroCarousel />
-
       </Card>
     </div>
   )

@@ -8,7 +8,7 @@ import FinnB from '../../images/finn-2.png';
 import AnnabelleA from '../../images/annabelle-1.png';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
-import ProfileImg from "../ProfileImg/ProfileImg";
+import ProfileImg from "../src/components/ProfileImg/ProfileImg";
 
 
 function AboutCarousel() {
@@ -40,7 +40,6 @@ function AboutCarousel() {
 
   return (
     <div>
-      <ProfileImg />
       <CardMedia
         component="img"
         height="350px"
