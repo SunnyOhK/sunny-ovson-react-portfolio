@@ -14,3 +14,5 @@
         <LinkedInIcon fontSize="large" className="icon" sx={{
           color: colors.quaternary
         }} />
+
+        

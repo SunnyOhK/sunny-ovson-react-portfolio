@@ -1,10 +1,10 @@
-import Hero from "../../components/Hero/Hero";
+import HomeHero from "../../components/Hero/HomeHero";
 
 function Home() {
   console.log('Home!')
   return (
     <>
-      <Hero />
+      <HomeHero />
     </>
   )
 };

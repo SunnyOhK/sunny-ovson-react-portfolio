@@ -1,10 +1,9 @@
 .profilePic {
   height: 250px;
-  /* position: absolute; */
-  margin-left: 20px;
-  margin-top: -40px;
   border-radius: 25px;
   border: dashed 4px black;
+  /* margin-left: 30px; */
+  margin-top: 40px;
 }
 
 .profilePic:hover {
@@ -15,4 +14,9 @@
   height: 30px;
   width: auto;
   /* position: absolute; */
+}
+
+.changeBtn:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  /* border-radius: 50%; */
 }
