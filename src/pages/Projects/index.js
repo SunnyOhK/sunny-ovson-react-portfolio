@@ -53,9 +53,9 @@ function Projects() {
 }} >
     <ImageList 
       sx={{ 
-        width: '80%',
-        height: 'auto'
-        }}
+        width: '70%',
+        height: 'auto',
+      }}
         >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
