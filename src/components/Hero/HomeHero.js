@@ -6,6 +6,7 @@ import ProfileImg from "../ProfileImg/ProfileImg";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 
 function Hero() {
@@ -24,18 +25,45 @@ function Hero() {
       >
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2} columns={16}>
-            <Grid xs={3}>
+            <Grid
+              xs={3}
+              sx={{
+                alignItems: 'center',
+                marginTop: 'auto',
+                marginBottom: 'auto',
+                paddingLeft: '5em'
+              }}
+            >
               <ProfileImg />
             </Grid>
             <Grid xs={13} sx={{
               justifyContent: 'center',
               textAlign: 'center',
               marginTop: '3em',
-              paddingRight: '20em'
+              paddingRight: '2em'
             }}>
-              <Typography variant="h3">
-                Welcome to my Portfolio!
-              </Typography>
+              <Container
+                className='letterContainer'
+                maxWidth='lg'
+              >
+                <Typography sx={{
+                  textAlign: 'center !important',
+                  color: colors.primary,
+                  paddingLeft: '2em',
+                  paddingRight: '2em',
+                }}
+                >
+                  <h1 className="letterHead">
+                    Welcome to my portfolio!                  </h1>
+                  <body1 className="letterBody">
+                    My updated resume is currently under construction.
+                    se reach out to me directly for resume details.
+                    <p>  </p>
+                  </body1>
+                  <body2 className="signature">- Sunny Ovson</body2>
+                  <br></br><br></br>
+                </Typography>
+              </Container>
             </Grid>
           </Grid>
         </Box>

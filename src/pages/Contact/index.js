@@ -38,7 +38,7 @@ function Contact() {
       }}
       >
         <h1 className="letterHead">
-          Get in touch. Stay in touch.
+          Get in touch || Stay in touch.
         </h1>
         <body1 className="letterBody">
           Thank you for visiting my Developer Portfolio.
