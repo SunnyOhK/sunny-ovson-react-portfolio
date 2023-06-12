@@ -127,6 +127,8 @@ function HeroCarousel() {
             width: '55%',
             textAlign: 'center',
             margin: '0 auto',
+            paddingLeft: '18px',
+            paddingRight: '18px',
           }}
         >
           {myImages[index].text}
@@ -140,6 +142,8 @@ function HeroCarousel() {
             width: '55%',
             textAlign: 'center',
             margin: '0 auto',
+            paddingLeft: '18px',
+            paddingRight: '18px',
           }}
         >
           {myImages[index].subtext}

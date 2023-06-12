@@ -19,7 +19,8 @@ export const ThemeProvider = ({ children }) => {
         secondary: "#FEFEFE",
         tertiary: "#62677A",
         quaternary: "#FAEBD7",
-        headlinerText: "#414449"
+        headlinerText: "#414449",
+        resumeText: '#212121'
       })
     } else if (colorValue === 1){
       setColors({
@@ -27,9 +28,10 @@ export const ThemeProvider = ({ children }) => {
         secondary: "#FFFFFF",
         tertiary: "#78586F",
         quaternary: "#FFFFFF",
-        headlinerText: "#414449"
+        headlinerText: "#414449",
+        resumeText: '#000000'
       })
-    } else if (colorValue === 3){
+    } else {
       setColors({
         primary: "#10224C",
         secondary: "#FCDAAF",
@@ -37,23 +39,7 @@ export const ThemeProvider = ({ children }) => {
         quaternary: "#FCDAAF",
         headlinerText: "#006E94"
       })
-    } else if (colorValue === 4){
-      setColors({
-        myname: "",
-        navback: "",
-        navbtntxt: "",
-        headerback: "",
-        footerback: "",
-        footicon: "",
-        copyrighttxt: "",
-        pageback: "",
-        primary: "#10224C",
-        secondary: "#FCDAAF",
-        tertiary: "#F36B3D",
-        quaternary: "#FCDAAF",
-        headlinerText: "#006E94"
-      })
-    }
+    } 
   }
 
   return (

@@ -2,36 +2,46 @@ import React from "react";
 import { Typography, Container } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "../../providers/ThemeProvider";
-import './style.css'
-import CallMadeIcon from '@mui/icons-material/CallMade';
-import SouthIcon from '@mui/icons-material/South';
+import './style.css';
+import ResumePreview from '../../images/resume-snippet2.png';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import IconButton from '@mui/material/IconButton';
+import PDFResume from '../../pdf/sunny-resume.pdf'
 
 
 function Resume() {
   console.log('Contact Me')
   const { colors } = useContext(ThemeContext);
-  const borderColor = '#FAEBD7';
+
+  const handleRedirect = (url) => {
+    window.open(url, '_blank');
+  };
 
   return (
-    <Container className='letterContainer' maxWidth='lg'>
+    <Container className='letterContainer' maxWidth='lg' sx={{
+      backgroundColor: colors.tertiary
+    }} >
       <Typography sx={{
         textAlign: 'center !important',
-        color: colors.primary
+        color: colors.resumeText
       }}
       >
         <h1 className="letterHead">
-          Coming Soon!
+          Web Development Resume • 2023
         </h1>
-        <body1 className="letterBody">
-          My updated resume is currently under construction.
-          <br></br>
-          In the meantime, please reach out to me directly for resume details.   
-          <SouthIcon />
-          <CallMadeIcon />
-          <p>  </p>
-        </body1>
+
+        <img src={ResumePreview} alt='resume-preview' style={{ maxWidth: '80%', height: 'auto' }} />
+        <br></br>
+        <IconButton 
+          aria-label='export' 
+          size="large" 
+          onClick={() => handleRedirect(PDFResume)}
+          sx={{ backgroundColor: '#faebd72a' }} >
+          <FileDownloadOutlinedIcon sx={{ fontSize: '34px', color: colors.resumeText }} />
+        </IconButton>
+        <br></br>
         <body2 className="signature">- Sunny Ovson</body2>
-        <br></br><br></br>
+        <br></br>
       </Typography>
     </Container>
   )
