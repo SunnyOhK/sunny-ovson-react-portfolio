@@ -9,7 +9,7 @@ function Header() {
   return (
     <Container sx={{
       maxWidth: '100vw !important',
-      height: '11em',
+      height: ['8em', '11em'],
       backgroundColor: colors.primary,
       display: 'flex',
       alignItems: 'center',

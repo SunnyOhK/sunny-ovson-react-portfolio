@@ -31,16 +31,16 @@ function Contact() {
   };
 
   return (
-    <Container className='letterContainer' maxWidth='lg'>
+    <Container className='letterContain' maxWidth='lg'>
       <Typography sx={{
         textAlign: 'center !important',
         color: colors.primary
       }}
       >
-        <h1 className="letterHead">
+        <h1 className="letterTop">
           Get in touch || Stay in touch.
         </h1>
-        <body1 className="letterBody">
+        <body1 className="letterMiddle">
           Thank you for visiting my Developer Portfolio.
           <br></br>
           If you have any questions or would like to connect, please reach out.
