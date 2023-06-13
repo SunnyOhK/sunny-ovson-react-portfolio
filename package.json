@@ -1,6 +1,6 @@
 {
   "name": "sunny-ovson-react-portfolio",
-  "homepage": "https://sunnyohk.github.io/sunny-ovson-react-portfolio/",
+  "homepage": "https://sunny-ovson-react-portfolio.vercel.app/",
   "version": "1.0.0",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
