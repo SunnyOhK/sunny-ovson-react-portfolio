@@ -21,29 +21,29 @@ function Projects() {
     {
       img: PatternOne,
       title: 'Quizify',
-      subtitle: 'GH1',
+      subtitle: 'Full-Stack',
       url: 'https://github.com/SunnyOhK/QuiZify.git',
       github: ''
     },
     {
       img: PatternTwo,
       title: `Snack n' Dash`,
-      subtitle: 'GH2',
+      subtitle: 'Front-End',
       url: 'https://github.com/SunnyOhK/snack-n-dash.git',
       github: ''
     },
     {
       img: PatternThree,
       title: 'Ready. Pet. Go!',
-      subtitle: 'GH3',
+      subtitle: 'MERN Stack',
       url: 'https://github.com/SunnyOhK/QuiZify.git',
       github: ''
     },
     {
       img: PatternFour,
       title: 'COMING SOON',
-      subtitle: 'GH4',
-      url: '',
+      subtitle: 'TBD',
+      url: 'https://github.com/SunnyOhK',
       github: ''
     }
   ];
