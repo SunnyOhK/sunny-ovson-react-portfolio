@@ -18,7 +18,7 @@ Refreshed professional Dev Portfolio featuring ReactJS front-end with MUI framew
 
 ## Installation
 
-This is deployed as a live webpage through GitHub Pages and can be accessed here: [Sunny Ovson Portfolio](/)
+This is deployed as a live webpage through GitHub Pages and can be accessed here: [Sunny Ovson Portfolio](https://sunnyohk.github.io/sunny-ovson-react-portfolio/)
 
 
 ## Usage 
