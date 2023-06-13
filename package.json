@@ -1,5 +1,6 @@
 {
   "name": "sunny-ovson-react-portfolio",
+  "homepage": "https://sunnyohk.github.io/sunny-ovson-react-portfolio",
   "version": "1.0.0",
   "dependencies": {
     "@emotion/react": "^11.11.0",
