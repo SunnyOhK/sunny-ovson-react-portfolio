@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3d49857d.css",
+    "main.js": "/static/js/main.09e0f7ac.js",
+    "static/media/resume-snippet2.png": "/static/media/resume-snippet2.0222c24e5bdd9a587a99.png",
+    "static/media/annabelle-1.png": "/static/media/annabelle-1.99c48c7cabf476719141.png",
+    "static/media/finn.png": "/static/media/finn.16e03ee89c8de055f02d.png",
+    "static/media/scrabble1.png": "/static/media/scrabble1.851ec75c7c4d244f9476.png",
+    "static/media/coding.png": "/static/media/coding.0ab66b8dcabdae451687.png",
+    "static/media/this-is-me.png": "/static/media/this-is-me.c07ef82f6f42b2174156.png",
+    "static/media/profile-pic.png": "/static/media/profile-pic.a92af334ca01abee3148.png",
+    "static/media/sunny-resume.pdf": "/static/media/sunny-resume.2c529234bed36bfd5adb.pdf",
+    "static/media/sales2.png": "/static/media/sales2.0816329f285a27aa1a67.png",
+    "static/media/profile-pic2.png": "/static/media/profile-pic2.10beb781a2bc673b4ec5.png",
+    "static/media/pattern-1.jpg": "/static/media/pattern-1.6cfd8408dc078f62472b.jpg",
+    "static/media/businesswoman.png": "/static/media/businesswoman.a7658676bbfe1f08f5f2.png",
+    "static/media/pattern-2.jpg": "/static/media/pattern-2.bc81969e8ffa6b0a0cc1.jpg",
+    "static/media/ralph-pjs.png": "/static/media/ralph-pjs.975a4ed9dca925a04afc.png",
+    "static/media/pattern-4.jpg": "/static/media/pattern-4.c07cc6a2a8404287c2d0.jpg",
+    "static/media/quit.png": "/static/media/quit.33f1e72119e84f7aaba0.png",
+    "static/media/change-icon.png": "/static/media/change-icon.a6233392adcec0b153fc.png",
+    "static/media/pattern-3.jpg": "/static/media/pattern-3.83f7818adb21c67b7fb5.jpg",
+    "index.html": "/index.html",
+    "main.3d49857d.css.map": "/static/css/main.3d49857d.css.map",
+    "main.09e0f7ac.js.map": "/static/js/main.09e0f7ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d49857d.css",
+    "static/js/main.09e0f7ac.js"
+  ]
+}
