@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import ProfileOne from '../../images/profile-pic.png'
 import ProfileTwo from '../../images/profile-pic2.png'
 import ProfileThree from '../../images/ralph-pjs.png'
@@ -50,7 +50,7 @@ function ProfileImg() {
           />
           <Button
             variant='text'
-            className="changeBtn"
+            className='changeBtn'
             sx={{
               width: '37px',
               height: '37px',

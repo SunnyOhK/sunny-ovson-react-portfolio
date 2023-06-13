@@ -13,14 +13,14 @@ export default function SelectTheme() {
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">Theme</InputLabel>
+      <FormControl variant='standard' sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id='demo-simple-select-standard-label'>Theme</InputLabel>
         <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
+          labelId='demo-simple-select-standard-label'
+          id='demo-simple-select-standard'
           value={theme}
           onChange={handleChange}
-          label="Theme"
+          label='Theme'
         >
           <MenuItem value={1}>Earthy Purple</MenuItem>
           <MenuItem value={2}>The Blues</MenuItem>

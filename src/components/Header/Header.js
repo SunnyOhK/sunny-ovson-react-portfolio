@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { ThemeContext } from "../../providers/ThemeProvider";
+import { ThemeContext } from '../../providers/ThemeProvider';
 
 function Header() {
   const { colors } = useContext(ThemeContext);

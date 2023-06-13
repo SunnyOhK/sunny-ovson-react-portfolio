@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -8,7 +8,7 @@ import PatternOne from '../../images/pattern-1.jpg';
 import PatternTwo from '../../images/pattern-2.jpg';
 import PatternThree from '../../images/pattern-3.jpg';
 import PatternFour from '../../images/pattern-4.jpg';
-import Container from "@mui/material/Container";
+import Container from '@mui/material/Container';
 import './style.css'
 
 
@@ -69,7 +69,7 @@ function Projects() {
               src={`${item.img}`}
               srcSet={`${item.img}`}
               alt={item.title}
-              loading="lazy"
+              loading='lazy'
             />
             <ImageListItemBar
               title={
@@ -83,7 +83,7 @@ function Projects() {
                   aria-label={`info about ${item.title}`}
                   onClick={() => handleRedirect(`${item.url}`)}
                 >
-                  <OpenInNewIcon className="openIcon" sx={{ marginRight: '15px' }}/>
+                  <OpenInNewIcon className='openIcon' sx={{ marginRight: '15px' }}/>
                 </IconButton>
               }              
             />

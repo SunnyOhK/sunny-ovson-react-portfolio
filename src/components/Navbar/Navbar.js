@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 // import Typography from '@mui/material/Typography';
@@ -10,25 +10,25 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-// import moment from "moment"
-// import NavigationButtons from "../Buttons/AboutButton";
+// import moment from 'moment'
+// import NavigationButtons from '../Buttons/AboutButton';
 import './style.css';
-import { ThemeContext } from "../../providers/ThemeProvider";
-import { PageContext } from "../../providers/PageProvider";
+import { ThemeContext } from '../../providers/ThemeProvider';
+import { PageContext } from '../../providers/PageProvider';
 
 
 function Navbar() {
-  console.log("navbar rendered")
+  console.log('navbar rendered')
   const { colors, toggleMode } = useContext(ThemeContext);
   const { page, togglePage } = useContext(PageContext);
-  const menuItems = [ "About", "Projects", "Contact", "Resume" ]
+  const menuItems = [ 'About', 'Projects', 'Contact', 'Resume' ]
   const borderColor = '#FAEBD7';
 
   console.log(colors);
   console.log(page);
 
   return (
-    <AppBar position="static" sx={{
+    <AppBar position='static' sx={{
       backgroundColor: colors.primary,
       height: '4.5em',
     }}>
@@ -38,9 +38,9 @@ function Navbar() {
           paddingTop: '.1em'
         }}>
           <IconButton
-            label="Page"
-            size="large"
-            onClick={() => togglePage("Home")}
+            label='Page'
+            size='large'
+            onClick={() => togglePage('Home')}
             sx={{
               display: 'flex',
               color: colors.secondary,
@@ -59,7 +59,7 @@ function Navbar() {
               <Button
                 key={item}
                 onClick={() => togglePage(item)}
-                label="Page"
+                label='Page'
                 sx={{
                   color: colors.secondary,
                   fontSize: { xs: '14px', md: '16px', lg: '18px' },
@@ -72,25 +72,25 @@ function Navbar() {
                 {item}
               </Button>
             ))}
-            <FormControl variant="standard" sx={{
+            <FormControl variant='standard' sx={{
               m: 1,
               minWidth: 120,
               backgroundColor: '#ffffff3b',
               border: 'none',
               display: { xs: 'none', sm: 'inline-flex' }
             }}>
-              <InputLabel id="demo-simple-select-helper-label" sx={{
+              <InputLabel id='demo-simple-select-helper-label' sx={{
                 color: '#ffffff',
               }}
               >
                 Theme
               </InputLabel>
               <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
+                labelId='demo-simple-select-standard-label'
+                id='demo-simple-select-standard'
                 value={colors}
                 onChange={toggleMode}
-                label="Theme"
+                label='Theme'
                 sx={{
                   border: 'none',
                   color: '#ffffff',

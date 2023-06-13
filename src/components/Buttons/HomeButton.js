@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import { ThemeContext } from "../../providers/ThemeProvider";
-import { PageContext } from "../../providers/PageProvider";
+import { ThemeContext } from '../../providers/ThemeProvider';
+import { PageContext } from '../../providers/PageProvider';
 
 
 function HomeButton() {
@@ -10,11 +10,11 @@ function HomeButton() {
   const { togglePage } = useContext(PageContext);
   return (
     <IconButton
-      label="Home"
-      size="large"
-      onClick={() => togglePage("Home")}
+      label='Home'
+      size='large'
+      onClick={() => togglePage('Home')}
       sx={{
-        display: { xs: "flex", md: "flex" },
+        display: { xs: 'flex', md: 'flex' },
         color: colors.secondary,
         marginRight: 'auto',
       }}

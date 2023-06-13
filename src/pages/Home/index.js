@@ -1,4 +1,4 @@
-import HomeHero from "../../components/Hero/HomeHero";
+import HomeHero from '../../components/Hero/HomeHero';
 
 function Home() {
   console.log('Home!')

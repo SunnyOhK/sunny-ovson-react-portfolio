@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import Card from '@mui/material/Card';
 import './style.css';
-import { ThemeContext } from "../../providers/ThemeProvider";
-import HeroCarousel from "../ImgCarousel/HeroCarousel";
+import { ThemeContext } from '../../providers/ThemeProvider';
+import HeroCarousel from '../ImgCarousel/HeroCarousel';
 
 
 function Hero() {
@@ -11,12 +11,11 @@ function Hero() {
 
   return (
     <div className='heroContainer'>
-      <Card sx={{
-        width: '99vw',
+      <Card className='aboutHeroCard' sx={{
         backgroundColor: colors.tertiary,
         height: 'auto',
         marginTop: '1.1em',
-        marginBottom: '-0.9em'
+        marginBottom: '-0.9em',
       }}
       >
         <HeroCarousel />

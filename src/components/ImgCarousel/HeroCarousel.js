@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import CardActions from '@mui/material/CardActions';
-import { IconButton } from "@mui/material";
-import CardMedia from "@mui/material/CardMedia";
+import { IconButton } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
 import BusinessWoman from '../../images/businesswoman.png';
 import Stressed from '../../images/sales2.png';
 import Quit from '../../images/quit.png';
@@ -100,8 +100,8 @@ function HeroCarousel() {
   return (
     <div>
       <Typography
-        variant="h6"
-        color="text.secondary"
+        variant='h6'
+        color='text.secondary'
         sx={{
           textAlign: 'center',
           marginTop: '0.8em',
@@ -113,10 +113,10 @@ function HeroCarousel() {
         {myImages[index].headline}
       </Typography>
       <CardMedia
-        component="img"
-        height="350px"
+        component='img'
+        height='350px'
         image={myImages[index].image}
-        alt="img"
+        alt='img'
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -134,34 +134,46 @@ function HeroCarousel() {
         alignItems: 'center',
       }}>
         <Typography
-          variant="subtitle1"
-          color="text.secondary"
+          variant='subtitle1'
+          color='text.secondary'
           sx={{
             fontSize: '21px',
             backgroundColor: '#faebd73f',
-            width: ['94%', '65%'],
+            borderTop: '3px solid #303030af',
+            borderLeft: '3px solid #303030af',
+            borderRight: '3px solid #303030af',
+            width: ['96%', '65%'],
             textAlign: 'center',
             margin: '0 auto',
             paddingLeft: ['3px', '18px'],
             paddingRight: ['3px', '18px'],
+            paddingTop: ['3px', '9px'],
             marginLeft: ['3px', 'auto'],
-            marginRight: 'auto'
+            marginRight: 'auto',
+            borderTopRightRadius: '15px',
+            borderTopLeftRadius: '15px',
           }}
         >
           {myImages[index].text}
         </Typography>
         <Typography
-          variant="subtitle2"
-          color="text.secondary"
+          variant='subtitle2'
+          color='text.secondary'
           sx={{
             fontSize: '21px',
             backgroundColor: '#faebd73f',
-            width: ['94%', '65%'],
+            width: ['96%', '65%'],
             textAlign: 'center',
             paddingLeft: ['3px', '18px'],
             paddingRight: ['3px', '18px'],
+            paddingBottom: ['3px', '9px'],
             marginLeft: ['3px', 'auto'],
-            marginRight: 'auto'
+            marginRight: 'auto',
+            borderBottom: '3px solid #303030af',
+            borderLeft: '3px solid #303030af',
+            borderRight: '3px solid #303030af',
+            borderBottomRightRadius: '15px',
+            borderBottomLeftRadius: '15px',
           }}
         >
           {myImages[index].subtext}
@@ -170,26 +182,27 @@ function HeroCarousel() {
       <CardActions sx={{
         justifyContent: 'center',
         alignItems: 'center',
+        paddingBottom: ['10px', '12px']
       }}>
         <IconButton
-          className="backBtn"
+          className='backBtn'
           disabled={myImages[index].disabled}
-          aria-label="back"
+          aria-label='back'
           onClick={beforeImage}
           sx={{
             marginTop: '-0.9em'
           }}
         >
-          <NavigateBeforeIcon fontSize="large" />
+          <NavigateBeforeIcon fontSize='large' />
         </IconButton>
         <IconButton
-          aria-label="next"
+          aria-label='next'
           onClick={rotateImage}
           sx={{
             marginTop: '-0.9em'
           }}
         >
-          <NavigateNextIcon fontSize="large" />
+          <NavigateNextIcon fontSize='large' />
         </IconButton>
       </CardActions>
     </div>

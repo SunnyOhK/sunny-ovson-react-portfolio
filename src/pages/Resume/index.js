@@ -1,7 +1,7 @@
-import React from "react";
-import { Typography, Container } from "@mui/material";
-import { useContext } from "react";
-import { ThemeContext } from "../../providers/ThemeProvider";
+import React from 'react';
+import { Typography, Container } from '@mui/material';
+import { useContext } from 'react';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
 import ResumePreview from '../../images/resume-snippet2.png';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
@@ -26,21 +26,21 @@ function Resume() {
         color: colors.resumeText
       }}
       >
-        <h1 className="letterHead">
+        <h1 className='letterHead'>
           Web Development Resume • 2023
         </h1>
 
-        <img src={ResumePreview} alt='resume-preview' className="resumePreview" style={{ height: 'auto' }} />
+        <img src={ResumePreview} alt='resume-preview' className='resumePreview' style={{ height: 'auto' }} />
         <br></br>
         <IconButton 
           aria-label='export' 
-          size="large"
+          size='large'
           onClick={() => handleRedirect(PDFResume)}
           sx={{ backgroundColor: '#faebd72a' }} >
           <FileDownloadOutlinedIcon sx={{ fontSize: ['24px', '34px'], color: colors.resumeText }} />
         </IconButton>
         <br></br>
-        <body2 className="signature">- Sunny Ovson</body2>
+        <body2 className='signature'>- Sunny Ovson</body2>
         <br></br>
       </Typography>
     </Container>

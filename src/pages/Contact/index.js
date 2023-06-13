@@ -1,7 +1,7 @@
-import React from "react";
-import { Typography, Container } from "@mui/material";
-import { useContext } from "react";
-import { ThemeContext } from "../../providers/ThemeProvider";
+import React from 'react';
+import { Typography, Container } from '@mui/material';
+import { useContext } from 'react';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
@@ -37,20 +37,20 @@ function Contact() {
         color: colors.primary
       }}
       >
-        <h1 className="letterTop">
+        <h1 className='letterTop'>
           Get in touch || Stay in touch.
         </h1>
-        <body1 className="letterMiddle">
+        <body1 className='letterMiddle'>
           Thank you for visiting my Developer Portfolio.
           <br></br>
           If you have any questions or would like to connect, please reach out.
           <p>  </p>
         </body1>
-        <body2 className="signature">- Sunny Ovson</body2>
+        <body2 className='signature'>- Sunny Ovson</body2>
         <br></br><br></br>
       </Typography>
       <Stack
-        direction="row"
+        direction='row'
         spacing={4}
         sx={{
           mt: 'auto',
@@ -68,8 +68,8 @@ function Contact() {
         <h4>LinkedIn</h4>
       </Stack>
       <Stack
-        direction="row"
-        divider={<Divider orientation="vertical" flexItem />}
+        direction='row'
+        divider={<Divider orientation='vertical' flexItem />}
         spacing={3}
         sx={{
           mt: 'auto',
@@ -80,21 +80,21 @@ function Contact() {
         }}
       >
         <Button
-          variant="contained"
+          variant='contained'
           sx={buttonStyle}
           onClick={() => handleRedirect('https://github.com/SunnyOhK/sunny-ovson-react-portfolio.git')}
         >
           <GitHubIcon />
         </Button>
         <Button
-          variant="contained"
+          variant='contained'
           sx={buttonStyle}
           onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
         >
           <EmailIcon />
         </Button>
         <Button
-          variant="contained"
+          variant='contained'
           sx={buttonStyle}
           onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
         >
