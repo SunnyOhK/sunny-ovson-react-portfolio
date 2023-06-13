@@ -9,7 +9,7 @@ import PatternTwo from '../../images/pattern-2.jpg';
 import PatternThree from '../../images/pattern-3.jpg';
 import PatternFour from '../../images/pattern-4.jpg';
 import Container from "@mui/material/Container";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import './style.css'
 
 
 function Projects() {
@@ -56,7 +56,7 @@ function Projects() {
     }} >
       <ImageList
         sx={{
-          width: '70%',
+          width: ['98%' , '95%', '90%', '80%'],
           height: 'auto',
           '& .MuiImageListItem-root': {
             margin: '10px',
@@ -73,9 +73,9 @@ function Projects() {
             />
             <ImageListItemBar
               title={
-                <span style={{ fontSize: '24px' }}>{item.title}</span>}
+                <span className='projectTitle'>{item.title}</span>}
               subtitle={
-                <span style={{ fontSize: '18px', marginLeft: '10px' }}>{item.subtitle}</span>}
+                <span className='projectSubtitle' style={{ marginLeft: '10px' }}>{item.subtitle}</span>}
 
               actionIcon={
                 <IconButton
@@ -83,7 +83,7 @@ function Projects() {
                   aria-label={`info about ${item.title}`}
                   onClick={() => handleRedirect(`${item.url}`)}
                 >
-                  <OpenInNewIcon sx={{ fontSize: '34px', marginRight: '15px' }}/>
+                  <OpenInNewIcon className="openIcon" sx={{ marginRight: '15px' }}/>
                 </IconButton>
               }              
             />

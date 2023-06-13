@@ -10,7 +10,7 @@ function Hero() {
   console.log(colors);
 
   return (
-    <div className='hero-container'>
+    <div className='heroContainer'>
       <Card sx={{
         width: '99vw',
         backgroundColor: colors.tertiary,

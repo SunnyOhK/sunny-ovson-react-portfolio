@@ -14,52 +14,67 @@ function Hero() {
   console.log(colors);
 
   return (
-    <div className='hero-container'>
-      <Card sx={{
-        width: '99vw',
-        backgroundColor: colors.tertiary,
-        height: '32em',
-        marginTop: '1.1em',
-        marginBottom: '-0.9em',
-      }}
+    <div className="heroContainer">
+      <Card
+        sx={{
+          display: "flex",
+          backgroundColor: colors.tertiary,
+          height: "auto",
+          marginTop: "1.1em",
+          marginBottom: "-0.9em",
+          paddingBottom: '2em'
+        }}
       >
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2} columns={16}>
+        <Box sx={{ flexGrow: 1 }} className="heroCard">
+          <Grid container spacing={0} columns={12}>
             <Grid
-              xs={3}
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={3}
+              xl={3}
               sx={{
-                alignItems: 'center',
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
                 marginTop: 'auto',
-                marginBottom: 'auto',
-                paddingLeft: '5em'
+                marginBottom: 'auto'
               }}
             >
               <ProfileImg />
             </Grid>
-            <Grid xs={13} sx={{
-              justifyContent: 'center',
-              textAlign: 'center',
-              marginTop: '3em',
-              paddingRight: '2em'
-            }}>
-              <Container
-                className='letterContainer'
-                maxWidth='lg'
-              >
-                <Typography sx={{
-                  textAlign: 'center !important',
-                  color: colors.primary,
-                  paddingLeft: '2em',
-                  paddingRight: '2em',
-                }}
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={9}
+              xl={9}
+              sx={{
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <Container className="letterContainer">
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: colors.primary,
+                  }}
                 >
                   <h1 className="letterHead">
-                    Welcome to my portfolio!                  </h1>
+                    Welcome to my portfolio!
+                  </h1>
+                  <h2 style={{ marginTop: '-18px', letterSpacing: '3px' }}>⭒  ✬  🔆  ✬  ⭒</h2>
                   <body1 className="letterBody">
-                    My updated resume is currently under construction.
-                    se reach out to me directly for resume details.
-                    <p>  </p>
+                    I am a Full Stack MERN Web Developer based in Austin, TX.
                   </body1>
+                  <br></br><br></br>
+                  <body2 className='letterSub'>
+                    Take a look around! You can learn more about me and how I got into coding, see a few of my recent projects, and snag a copy of my resume. And, of course, you can check out my GitHub repository or connect on LinkedIn.
+                    <p>  </p>
+                  </body2>
                   <body2 className="signature">- Sunny Ovson</body2>
                   <br></br><br></br>
                 </Typography>

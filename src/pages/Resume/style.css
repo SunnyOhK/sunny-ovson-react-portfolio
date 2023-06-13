@@ -10,8 +10,25 @@
 }
 
 .letterHead {
-  font-size: 41px;
   text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .letterHead {
+      font-size: 26px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .letterHead {
+      font-size: 34px;
+  }
+}
+
+@media (min-width: 901px) {
+  .letterHead {
+      font-size: 41px;
+  }
 }
 
 .letterBody {
@@ -21,5 +38,22 @@
 .signature {
   font-family: 'Italianno', sans-serif;
   font-size: 48px;
-  text-align: end !important;
+}
+
+@media (max-width: 600px) {
+  .resumePreview {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .resumePreview {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 901px) {
+  .resumePreview {
+    max-width: 80%;
+  }
 }

@@ -30,14 +30,14 @@ function Resume() {
           Web Development Resume • 2023
         </h1>
 
-        <img src={ResumePreview} alt='resume-preview' style={{ maxWidth: '80%', height: 'auto' }} />
+        <img src={ResumePreview} alt='resume-preview' className="resumePreview" style={{ height: 'auto' }} />
         <br></br>
         <IconButton 
           aria-label='export' 
-          size="large" 
+          size="large"
           onClick={() => handleRedirect(PDFResume)}
           sx={{ backgroundColor: '#faebd72a' }} >
-          <FileDownloadOutlinedIcon sx={{ fontSize: '34px', color: colors.resumeText }} />
+          <FileDownloadOutlinedIcon sx={{ fontSize: ['24px', '34px'], color: colors.resumeText }} />
         </IconButton>
         <br></br>
         <body2 className="signature">- Sunny Ovson</body2>
