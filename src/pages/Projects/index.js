@@ -36,7 +36,7 @@ function Projects() {
       img: PatternThree,
       title: 'Ready. Pet. Go!',
       subtitle: 'MERN Stack',
-      url: 'https://github.com/SunnyOhK/QuiZify.git',
+      url: 'https://ready-pet-go-835e6edf1caa.herokuapp.com/home',
       github: ''
     },
     {
