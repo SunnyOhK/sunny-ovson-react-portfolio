@@ -3,7 +3,7 @@ import { Typography, Container } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
-import ResumePreview from '../../images/resume-snippet2.png';
+import ResumePreview from '../../images/resume-sunny.png';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import IconButton from '@mui/material/IconButton';
 import PDFResume from '../../pdf/sunny-resume.pdf'
@@ -18,7 +18,7 @@ function Resume() {
   };
 
   return (
-    <Container className='letterContainer' maxWidth='lg' sx={{
+    <Container className='letterContainer' sx={{
       backgroundColor: colors.tertiary
     }} >
       <Typography sx={{

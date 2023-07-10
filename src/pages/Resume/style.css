@@ -1,6 +1,7 @@
 .letterContainer {
-  padding-right: 30px;
-  padding-left: 30px;
+  width: 99vw;
+  /* padding-right: 30px;
+  padding-left: 30px; */
   padding-bottom: 30px;
   margin-top: 2em;
   border: solid;
