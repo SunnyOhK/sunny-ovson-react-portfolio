@@ -3,15 +3,18 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 // import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-// import moment from 'moment'
-// import NavigationButtons from '../Buttons/AboutButton';
 import './style.css';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import { PageContext } from '../../providers/PageProvider';
@@ -21,8 +24,18 @@ function Navbar() {
   console.log('navbar rendered')
   const { colors, toggleMode } = useContext(ThemeContext);
   const { page, togglePage } = useContext(PageContext);
-  const menuItems = [ 'About', 'Projects', 'Contact', 'Resume' ]
+  const menuItems = ['About', 'Projects', 'Contact', 'Resume']
   const borderColor = '#FAEBD7';
+
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   console.log(colors);
   console.log(page);
@@ -50,28 +63,75 @@ function Navbar() {
             <HomeOutlinedIcon
               sx={{
                 height: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
-                width: { xs: '1.2em', md: '1.5em', lg: '1.8em' }
+                width: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
+                marginBottom: { xs: '-.7em', sm: '-.4em', md: '.1em', lg: '.4em' },
               }}
             />
           </IconButton>
-          <div className='menuItems'>
-            {menuItems.map(item => (
-              <Button
-                key={item}
-                onClick={() => togglePage(item)}
-                label='Page'
+          <div className='menuDropdown'>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+                sx={{ marginBottom: '-.7em' }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
                 sx={{
-                  color: colors.secondary,
-                  fontSize: { xs: '14px', md: '16px', lg: '18px' },
-                  marginTop: '0.8em',
-                  '&:hover': {
-                    boxShadow: `1px 2px 7px 0px ${borderColor}`
-                  }
+                  display: { xs: 'block', sm: 'none' },
                 }}
               >
-                {item}
-              </Button>
-            ))}
+                {menuItems.map((item) => (
+                  <MenuItem 
+                    key={item} 
+                    onClick={() => togglePage(item)}
+                    label='Page'
+                    >
+                    <Typography textAlign="center" sx={{ color: colors.primary }}>{item}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          </div>
+
+          <div className='menuItems'>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'inline-flex' } }}>
+              {menuItems.map(item => (
+                <Button
+                  key={item}
+                  onClick={() => togglePage(item)}
+                  label='Page'
+                  sx={{
+                    color: colors.secondary,
+                    fontSize: { xs: '13px', sm: '14px', md: '16px', lg: '18px' },
+                    marginTop: '0.8em',
+                    '&:hover': {
+                      boxShadow: `1px 2px 7px 0px ${borderColor}`
+                    }
+                  }}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Box>
             <FormControl variant='standard' sx={{
               m: 1,
               minWidth: 120,
