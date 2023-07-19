@@ -13,7 +13,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import Divider from '@mui/material/Divider';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import './style.css';
 import { ThemeContext } from '../../providers/ThemeProvider';
@@ -72,7 +72,7 @@ function Navbar() {
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
               <IconButton
                 size="large"
-                aria-label="account of current user"
+                aria-label="menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
@@ -86,12 +86,12 @@ function Navbar() {
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: 'bottom',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'right',
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
@@ -100,14 +100,28 @@ function Navbar() {
                 }}
               >
                 {menuItems.map((item) => (
-                  <MenuItem 
-                    key={item} 
+                  <MenuItem
+                    key={item}
                     onClick={() => togglePage(item)}
                     label='Page'
+                  >
+                    <Typography
+                      textAlign="center"
+                      sx={{ color: colors.primary, }}
                     >
-                    <Typography textAlign="center" sx={{ color: colors.primary }}>{item}</Typography>
+                      {item}
+                      <Divider sx={{
+                        color: colors.primary,
+                        width: '80px',
+                        marginLeft: '-10px',
+                        marginRight: '-10px',
+                        paddingTop: '10px',
+                        marginBottom: '-5px',
+                      }} />
+                    </Typography>
                   </MenuItem>
                 ))}
+
               </Menu>
             </Box>
           </div>
