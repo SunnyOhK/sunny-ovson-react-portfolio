@@ -1,5 +1,5 @@
 .profilePic {
-  height: 250px;
+  height: 280px;
   border-radius: 25px;
   border: dashed 4px black;
   /* margin-left: 30px; */
@@ -7,7 +7,7 @@
 }
 
 .profilePic:hover {
-  cursor: pointer;
+  cursor: arrow;
 }
 
 .changeIcon {
@@ -19,4 +19,13 @@
 .changeBtn:hover {
   background-color: rgba(255, 255, 255, 0.16);
   /* border-radius: 50%; */
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
