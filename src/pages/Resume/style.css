@@ -17,19 +17,19 @@
 }
 
 @media (max-width: 600px) {
-  .letterHead {
-    font-size: 26px;
+  .rezStars {
+    font-size: 22px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .letterHead {
-    font-size: 34px;
+  .rezStars {
+    font-size: 30px;
   }
 }
 
 @media (min-width: 901px) {
-  .letterHead {
+  .rezStars {
     font-size: 41px;
   }
 }
@@ -45,14 +45,21 @@
 
 .resumeContainer {
   width: 72vw;
-  height: 80vh;
+  height: 79vh;
   border: 2px solid black;
   overflow: auto;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media (max-width: 600px) {
+  .resumeContainer {
+    width: 90vw;
+    height: auto;
+  }
 }
 
 .resumePreview {

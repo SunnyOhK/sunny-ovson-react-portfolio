@@ -25,6 +25,7 @@ function Resume() {
         color: colors.resumeText
       }}
       >
+        <h1 className='rezStars' sx={{ marginTop: '16px', letterSpacing: '3px' }}>⭒  ✬  🔆  ✬  ⭒</h1>
           <div className='resumeContainer'>
           <img
             src={ResumePreview}
