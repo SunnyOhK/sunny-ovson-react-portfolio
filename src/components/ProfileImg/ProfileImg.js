@@ -12,6 +12,7 @@ import './style.css'
 function ProfileImg() {
 
   const [index, setIndex] = useState(0);
+  const [rotate, setRotate] = useState(false);
   const profileImages = [
     {
       image: ProfileTwo,
@@ -27,7 +28,7 @@ function ProfileImg() {
     }
   ]
 
-  function switchImage() {
+  const switchImage = () => {
     if (index === profileImages.length - 1) {
       setIndex(0)
     } else {
@@ -35,6 +36,20 @@ function ProfileImg() {
       setIndex(newIndex)
     }
   };
+
+  const rotateIcon = () => {
+      setRotate(true);
+  };
+
+  const handleIconClick = () => {
+    rotateIcon();
+    switchImage();
+  };
+
+  const handleRotateEnd = () => {
+    setRotate(false);
+  };
+  
   return (
         <div
           style={{
@@ -51,19 +66,22 @@ function ProfileImg() {
           <Button
             variant='text'
             className='changeBtn'
+            onClick={handleIconClick}
             sx={{
               width: '37px',
               height: '37px',
               minWidth: '32px',
               minHeight: '32px',
               borderRadius: '50%',
-              marginTop: '6px'
-            }}>
+              marginTop: '6px',
+              animation: rotate ? 'rotate360 1s' : 'none',
+            }}
+            onAnimationEnd={handleRotateEnd}
+            >
             <img
               src={ChangeIcon}
               alt='changeIcon'
               className='changeIcon'
-              onClick={switchImage}
             />
           </Button>
         </div>
