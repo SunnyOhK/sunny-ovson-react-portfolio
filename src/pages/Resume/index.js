@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container } from '@mui/material';
+import { Typography } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
@@ -18,22 +18,23 @@ function Resume() {
   };
 
   return (
-    <Container className='letterContainer' sx={{
-      backgroundColor: colors.tertiary
-    }} >
+    <div className='fullWidthContainer' style={{ backgroundColor: colors.tertiary }}>
+
       <Typography sx={{
         textAlign: 'center !important',
         color: colors.resumeText
       }}
       >
-        <h1 className='letterHead'>
-          Web Development Resume • 2023
-        </h1>
-
-        <img src={ResumePreview} alt='resume-preview' className='resumePreview' style={{ height: 'auto' }} />
+        <h1 className='rezStars' sx={{ marginTop: '16px', letterSpacing: '3px' }}>⭒  ✬  🔆  ✬  ⭒</h1>
+          <div className='resumeContainer'>
+          <img
+            src={ResumePreview}
+            alt='resume-preview'
+            className='resumePreview' />
+        </div>
         <br></br>
-        <IconButton 
-          aria-label='export' 
+        <IconButton
+          aria-label='export'
           size='large'
           onClick={() => handleRedirect(PDFResume)}
           sx={{ backgroundColor: '#faebd72a' }} >
@@ -43,7 +44,8 @@ function Resume() {
         <body2 className='signature'>- Sunny Ovson</body2>
         <br></br>
       </Typography>
-    </Container>
+
+    </div>
   )
 };
 

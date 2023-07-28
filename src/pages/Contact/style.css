@@ -26,7 +26,19 @@
 
 @media (max-width: 600px) {
   .letterTop {
-    font-size: 32px !important;
+    font-size: 28px !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .letterTop {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 901px) {
+  .letterTop {
+    font-size: 41px;
   }
 }
 
@@ -47,3 +59,34 @@
     font-size: 28px;
   }
 }
+
+.lineBreak {
+  display: none;
+}
+
+.dividerLines {
+  display: inline;
+}
+
+.dividerDots {
+  display: none;
+}
+
+@media (max-width: 499px) {
+  .lineBreak {
+    display: inline;
+    white-space: break-spaces;
+    white-space: pre-wrap;
+  }
+  .dividerLines {
+    display: none;
+    white-space: break-spaces;
+    white-space: pre-wrap;
+  }
+  .dividerDots {
+    display: inline;
+    white-space: break-spaces;
+    white-space: pre-wrap;
+  }
+}
+

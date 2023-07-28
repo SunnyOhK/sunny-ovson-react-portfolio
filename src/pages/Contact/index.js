@@ -11,11 +11,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '@mui/material/Button';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 
+
+
 function Contact() {
   console.log('Contact Me')
   const { colors } = useContext(ThemeContext);
   const borderColor = '#FAEBD7';
-
+  
   const buttonStyle = {
     backgroundColor: colors.primary,
     width: '90px',
@@ -38,7 +40,7 @@ function Contact() {
       }}
       >
         <h1 className='letterTop'>
-          Get in touch || Stay in touch.
+          Get in touch<span className='lineBreak'><br></br></span> &nbsp;<span className='dividerLines'>||</span><span className='dividerDots'>• • •</span>&nbsp; <span className='lineBreak'><br></br></span>Stay in touch
         </h1>
         <body1 className='letterMiddle'>
           Thank you for visiting my Developer Portfolio.
@@ -51,26 +53,32 @@ function Contact() {
       </Typography>
       <Stack
         direction='row'
-        spacing={4}
+        spacing={{
+          xs: 2,
+          md: 3
+        }}
         sx={{
           mt: 'auto',
           justifyContent: 'center',
           alignItems: 'center',
           textTransform: 'uppercase',
-          marginRight: '-17px',
+          marginRight: '8px',
           marginBottom: '-10px'
         }}
       >
         <h4>GitHub</h4>
         <StarPurple500Icon />
-        <h4>Email</h4>
-        <StarPurple500Icon />
         <h4>LinkedIn</h4>
+        <StarPurple500Icon />
+        <h4>Email</h4>
       </Stack>
       <Stack
         direction='row'
         divider={<Divider orientation='vertical' flexItem />}
-        spacing={3}
+        spacing={{
+          xs: 1,
+          sm: 3
+        }}
         sx={{
           mt: 'auto',
           justifyContent: 'center',
@@ -89,16 +97,16 @@ function Contact() {
         <Button
           variant='contained'
           sx={buttonStyle}
-          onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
+          onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
         >
-          <EmailIcon />
+          <LinkedInIcon />
         </Button>
         <Button
           variant='contained'
           sx={buttonStyle}
-          onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
+          onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
         >
-          <LinkedInIcon />
+          <EmailIcon />
         </Button>
       </Stack>
 
