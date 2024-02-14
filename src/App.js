@@ -16,9 +16,9 @@ function App() {
     <ThemeProvider>
       <PageProvider>
         <Header />
-      <Navbar />
-      <PageContainer/>
-      <Footer />
+        <Navbar />
+        <PageContainer />
+        <Footer />
       </PageProvider>
     </ThemeProvider>
   )
