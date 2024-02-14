@@ -1,0 +1,27 @@
+label {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.2em;
+  padding-right: 1em;
+}
+
+.submitBtn {
+  color: black !important;
+  font-size: 1.4em !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  border-radius: 40px !important;
+  background: linear-gradient(90deg,
+      #815f77,
+      #ddd2c3);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg,
+      #ddd2c3,
+      #815f77);
+}
+
+.btnPosition {
+  justify-content: center;
+  text-align: center;
+}

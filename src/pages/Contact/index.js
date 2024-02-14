@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container } from '@mui/material';
+import { Typography, Container, Box } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
@@ -10,14 +10,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '@mui/material/Button';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
-
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 
 function Contact() {
   console.log('Contact Me')
   const { colors } = useContext(ThemeContext);
   const borderColor = '#FAEBD7';
-  
+
   const buttonStyle = {
     backgroundColor: colors.primary,
     width: '90px',
@@ -51,6 +51,9 @@ function Contact() {
         <body2 className='signature'>- Sunny Ovson</body2>
         <br></br><br></br>
       </Typography>
+      <Box className='inputForm'>
+        <ContactForm />
+      </Box>
       <Stack
         direction='row'
         spacing={{
