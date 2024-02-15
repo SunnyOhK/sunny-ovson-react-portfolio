@@ -10,6 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '@mui/material/Button';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
+import BkgImage from '../../images/contact-page-bkg.png';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
 
@@ -34,10 +35,18 @@ function Contact() {
   };
 
   return (
+    <div style={{
+      backgroundImage: `url(${BkgImage})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      display: 'flex',
+      marginBottom: '-2em'
+    }}>
     <Container className='letterContain' maxWidth='lg'>
       <Typography sx={{
         textAlign: 'center !important',
-        color: colors.primary
+        color: colors.primary,
       }}
       >
         <h1 className='letterTop'>
@@ -115,8 +124,7 @@ function Contact() {
       </Stack>
 
     </Container>
-
-
+    </div>
   )
 };
 

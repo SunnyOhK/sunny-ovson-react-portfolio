@@ -57,30 +57,69 @@ function ContactForm() {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <TextField
+            required
             fullWidth
+            id='first-name-field'
             label="First Name"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            onInvalid={() => {
+              if (formData.firstName === '') {
+                document
+                .getElementById('first-name-field')
+                .setCustomValidity('First name is required.')
+              } else {
+                document
+                  .getElementById('first-name-field')
+                  .setCustomValidity('')
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            required
             fullWidth
+            id='last-name-field'
             label="Last Name"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            onInvalid={() => {
+              if (formData.firstName === '') {
+                document
+                  .getElementById('last-name-field')
+                  .setCustomValidity('Last name is required.')
+              } else {
+                document
+                  .getElementById('last-name-field')
+                  .setCustomValidity('')
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
+            required
             fullWidth
+            id='email-text-field'
             label="Email Address"
             name="email"
             type="email"
             value={formData.email}
             onChange={handleChange}
+            onInvalid={() => {
+              if (formData.firstName === '') {
+                document
+                  .getElementById('email-text-field')
+                  .setCustomValidity('Email is required.')
+              } else {
+                document
+                  .getElementById('email-text-field')
+                  .setCustomValidity('')
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12}>
@@ -106,10 +145,22 @@ function ContactForm() {
         </Grid>
         <Grid item xs={12} className='btnPosition'>
           {isClicked ? (
-            <CheckIcon sx={{
-              fontSize: '2.5em',
+            <div>
+              <CheckIcon sx={{
+              fontSize: {
+                xs: '200%',
+                md: '220%',
+              },
               color: `${colors.primary}`,
             }}/>
+            <Typography sx={{
+              fontFamily: `'Italianno', sans-serif`,
+              fontSize: {
+                xs: '200%',
+                md: '260%'
+              },
+            }}>Thank you!</Typography>
+            </div>
           ) : (
             <Button
               className='submitBtn'
@@ -117,7 +168,14 @@ function ContactForm() {
               variant="text"
               sx={{
                 color: colors.primary,
-                fontSize: '1.4em',
+                width: {
+                  xs: '30%',
+                  md: '18%'
+                },
+                fontSize: {
+                  xs: '100%',
+                  sm: '140%',
+                },
                 paddingLeft: '30px',
                 paddingRight: '30px',
                 borderRadius: '40px',

@@ -15,13 +15,17 @@ label {
       #ddd2c3);
 } */
 
-.submitBtn:hover {
+/* .submitBtn:hover {
   background: linear-gradient(90deg,
       #ddd2c3,
       #815f77);
-}
+} */
 
 .btnPosition {
   justify-content: center;
   text-align: center;
+}
+
+.thanks {
+  font-family: 'Italianno', sans-serif;
 }
