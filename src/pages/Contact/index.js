@@ -67,7 +67,7 @@ function Contact() {
           alignItems: 'center',
           textTransform: 'uppercase',
           marginRight: '8px',
-          marginBottom: '-10px'
+          // marginBottom: '-10px'
         }}
       >
         <h4>GitHub</h4>
