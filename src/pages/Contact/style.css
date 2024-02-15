@@ -3,11 +3,20 @@
   padding-left: 40px;
   padding-bottom: 30px;
   margin-top: 2em;
+  margin-bottom: 2em;
   border: solid;
   display: flex;
+  position: relative;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: #faebd7;
 }
+
+/* .bkgImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 
 .letterTop {
   font-size: 41px;
