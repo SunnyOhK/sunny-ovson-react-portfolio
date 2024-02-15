@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Container, Box } from '@mui/material';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
 import Divider from '@mui/material/Divider';
@@ -14,6 +14,7 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 
 
 function Contact() {
+
   console.log('Contact Me')
   const { colors } = useContext(ThemeContext);
   const borderColor = '#FAEBD7';
