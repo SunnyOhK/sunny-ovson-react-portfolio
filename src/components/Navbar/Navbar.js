@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Divider from '@mui/material/Divider';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import Tooltip from '@mui/material/Tooltip';
 import './style.css';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import { PageContext } from '../../providers/PageProvider';
@@ -50,24 +51,39 @@ function Navbar() {
           width: '100%',
           paddingTop: '.1em'
         }}>
-          <IconButton
-            label='Page'
-            size='large'
-            onClick={() => togglePage('Home')}
-            sx={{
-              display: 'flex',
-              color: colors.secondary,
-              marginRight: 'auto',
-            }}
-          >
-            <HomeOutlinedIcon
+          <Tooltip
+            title='home'
+            slotProps={{
+              popper: {
+                modifiers: [
+                  {
+                    name: 'offset',
+                    options: {
+                      offset: [0, -30],
+                    },
+                  },
+                ],
+              },
+            }}>
+            <IconButton
+              label='Page'
+              size='large'
+              onClick={() => togglePage('Home')}
               sx={{
-                height: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
-                width: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
-                marginBottom: { xs: '-.7em', sm: '-.4em', md: '.1em', lg: '.4em' },
+                display: 'flex',
+                color: colors.secondary,
+                marginRight: 'auto',
               }}
-            />
-          </IconButton>
+            >
+              <HomeOutlinedIcon
+                sx={{
+                  height: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
+                  width: { xs: '1.2em', md: '1.5em', lg: '1.8em' },
+                  marginBottom: { xs: '-.7em', sm: '-.4em', md: '.1em', lg: '.4em' },
+                }}
+              />
+            </IconButton>
+          </Tooltip>
           <div className='menuDropdown'>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
               <IconButton

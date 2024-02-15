@@ -8,6 +8,9 @@ import PatternOne from '../../images/pattern-1.jpg';
 import PatternTwo from '../../images/pattern-2.jpg';
 import PatternThree from '../../images/pattern-3.jpg';
 import PatternFour from '../../images/pattern-4.jpg';
+import Quizify from '../../images/quizify.png';
+import RPG from '../../images/ready-pet-go.png';
+import SND from '../../images/snack-n-dash.png';
 import Container from '@mui/material/Container';
 import './style.css'
 
@@ -19,21 +22,21 @@ function Projects() {
 
   const itemData = [
     {
-      img: PatternOne,
+      img: Quizify,
       title: 'Quizify',
       subtitle: 'Full-Stack',
       url: 'https://github.com/SunnyOhK/QuiZify.git',
       github: ''
     },
     {
-      img: PatternTwo,
+      img: SND,
       title: `Snack n' Dash`,
       subtitle: 'Front-End',
       url: 'https://github.com/SunnyOhK/snack-n-dash.git',
       github: ''
     },
     {
-      img: PatternThree,
+      img: RPG,
       title: 'Ready. Pet. Go!',
       subtitle: 'MERN Stack',
       url: 'https://ready-pet-go-835e6edf1caa.herokuapp.com/home',
@@ -56,7 +59,7 @@ function Projects() {
     }} >
       <ImageList
         sx={{
-          width: ['98%' , '95%', '90%', '80%'],
+          width: ['98%', '95%', '90%', '80%'],
           height: 'auto',
           '& .MuiImageListItem-root': {
             margin: '10px',
@@ -64,12 +67,28 @@ function Projects() {
         }}
       >
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem key={item.img}
+            sx={{
+              height: '400px !important',
+              overflow: 'hidden',
+              '&:hover img': {
+                animation: 'scroll 5s linear infinite',
+              },
+              '@keyframes scroll': {
+                '0%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(calc(-100% + 300px))' },
+                '100%': { transform: 'translateY(-200px)' },
+              },
+            }}>
             <img
               src={`${item.img}`}
               srcSet={`${item.img}`}
               alt={item.title}
               loading='lazy'
+              style={{
+                objectFit: 'cover',
+                width: '100%',
+              }}
             />
             <ImageListItemBar
               title={
@@ -83,9 +102,9 @@ function Projects() {
                   aria-label={`info about ${item.title}`}
                   onClick={() => handleRedirect(`${item.url}`)}
                 >
-                  <OpenInNewIcon className='openIcon' sx={{ marginRight: '15px' }}/>
+                  <OpenInNewIcon className='openIcon' sx={{ marginRight: '15px' }} />
                 </IconButton>
-              }              
+              }
             />
           </ImageListItem>
         ))}

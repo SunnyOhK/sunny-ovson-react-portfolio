@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import './style.css';
 import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 function Footer() {
   const { colors } = useContext(ThemeContext);
@@ -20,30 +21,80 @@ function Footer() {
       backgroundColor: colors.primary,
     }}>
       <div className='footIcons'>
-        <IconButton
-          onClick={() => handleRedirect('https://github.com/SunnyOhK/sunny-ovson-react-portfolio.git')}
+        <Tooltip
+          title='GitHub'
+          slotProps={{
+            popper: {
+              modifiers: [
+                {
+                  name: 'offset',
+                  options: {
+                    offset: [0, -20],
+                  },
+                },
+              ],
+            },
+          }}
         >
-          <GitHubIcon
-            fontSize='large'
-            className='icon'
-            sx={{ color: colors.quaternary }} />
-        </IconButton>
-        <IconButton
-          onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
+          <IconButton
+            onClick={() => handleRedirect('https://github.com/SunnyOhK/sunny-ovson-react-portfolio.git')}
+          >
+            <GitHubIcon
+              fontSize='large'
+              className='icon'
+              sx={{ color: colors.quaternary }} />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip
+          title='Email'
+          slotProps={{
+            popper: {
+              modifiers: [
+                {
+                  name: 'offset',
+                  options: {
+                    offset: [0, -20],
+                  },
+                },
+              ],
+            },
+          }}
         >
-          <EmailIcon
-            fontSize='large'
-            className='icon'
-            sx={{ color: colors.quaternary }} />
-        </IconButton>
-        <IconButton
-          onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
+          <IconButton
+            onClick={() => handleRedirect('mailto:127900916+SunnyOhK@users.noreply.github.com')}
+          >
+            <EmailIcon
+              fontSize='large'
+              className='icon'
+              sx={{ color: colors.quaternary }} />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip
+          title='LinkedIn'
+          slotProps={{
+            popper: {
+              modifiers: [
+                {
+                  name: 'offset',
+                  options: {
+                    offset: [0, -20],
+                  },
+                },
+              ],
+            },
+          }}
         >
-          <LinkedInIcon
-            fontSize='large'
-            className='icon'
-            sx={{ color: colors.quaternary }} />
-        </IconButton>
+          <IconButton
+            onClick={() => handleRedirect('https://www.linkedin.com/in/sunnyovson/')}
+          >
+            <LinkedInIcon
+              fontSize='large'
+              className='icon'
+              sx={{ color: colors.quaternary }} />
+          </IconButton>
+        </Tooltip>
       </div>
       <Typography className='footText' sx={{
         color: colors.quaternary
